@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>login</title>
+ <style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #66cfff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+main {
+  padding: 20px;
+}
+label {
+  display: block;
+  margin-top: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="password"],
+ {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+a, input[type="submit"]{
+  background-color: #66cfff;
+  color: black;
+  padding: 8px 19px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input.l {
+  background-color: #66cfff;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+marquee{
+   background-color: #99dfff;
+   color: red;
+}
+ </style>
+</head>
+<body>
+  <header>
+    <h1>SignUp</h1>
+  </header>
+  <main>
+    <marquee direction="right" scrollamount="10">All <b>*</b> fields are mandatory fields </marquee>
+    <form id="signup-form" method="POST" action="/H Instruction page">
+      <label for="name">Name<b>*</b>:</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email<b>*</b>:</label>
+      <input type="email" id="email" name="email">
+      <label for="mobile">Mobile no<b>*</b>:</label>
+      <input type="text" id="mobile" name="mobile">
+      <label for="hallticketno">Hall ticket no<b>*</b>:</label>
+      <input type="text" id="hallticketno" name="hallticketno">
+      <label for="password">Password<b>*</b>:</label>
+      <input type="password" id="password" name="password">
+      <br><br>
+      <a href="/Home page">Back</a>
+      <input type="submit" value="Login">
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+from flask import Flask, render_template
+
+app = Flask(__name__, static_folder='static')
+
+@app.route('/')
+def home_page():
+    try:
+        html_files = ['Home_Page.html', 'Contact_us.html','Exam_paper.html']
+        rendered_html = ''
+        for file in html_files:
+            rendered_html += render_template(file)
+
+        return rendered_html
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
