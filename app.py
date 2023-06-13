@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import mysql.connector
 import os 
 
-app = Flask(__name__,static_folder='static',template_folder='templates')
+app = Flask(__name__,static_folder='static',template_folder='template')
 en_config=os.getenv("PROD_APP_SETTINGS","config.DevelopmentConfig")
 
 db_config = {
@@ -15,7 +15,7 @@ db_config = {
 
 @app.route('/')
 def index():
-    return render_template('/templates/Home page.html')
+    return render_template('Home page.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
