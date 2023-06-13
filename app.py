@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__,static_folder='static',template_folder='template')
 en_config=os.getenv("PROD_APP_SETTINGS","config.DevelopmentConfig")
-
+template_dir = os.path.abspath('template')
 db_config = {
     'host': 'localhost',
     'user': 'root',
