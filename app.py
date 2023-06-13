@@ -19,7 +19,7 @@ template_dir = '/template'
 env = Environment(loader=FileSystemLoader(template_dir))
 
 # Now you can render your template
-template = env.get_template('H login page.html')
+template = env.get_template('Home page.html')
 @app.route('/')
 def index():
     return render_template('Home page.html')
@@ -70,9 +70,9 @@ def Othimpinst_page():
 def Exampaper_page():
     return render_template('Exam paper.html')
 
-@app.route('/H Login page')
+'''@app.route('/H Login page')
 def Hlogin_page():
-    return render_template('H login page.html')
+    return render_template('H login page.html')'''
 
 @app.route('/H Instruction page')
 def HInst_page():
