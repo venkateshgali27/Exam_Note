@@ -15,7 +15,7 @@ db_config = {
 
 @app.route('/')
 def index():
-    return render_template('Home page.html')
+    return render_template('/templates/Home page.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
