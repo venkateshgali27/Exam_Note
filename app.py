@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import mysql.connector
 import os 
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='static',template_folder='templates')
 en_config=os.getenv("PROD_APP_SETTINGS","config.DevelopmentConfig")
 
 db_config = {
