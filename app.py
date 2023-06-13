@@ -15,7 +15,7 @@ db_config = {
 from jinja2 import Environment, FileSystemLoader
 
 # Specify the template directory explicitly
-template_dir = '/path/to/template'
+template_dir = '/template'
 env = Environment(loader=FileSystemLoader(template_dir))
 
 # Now you can render your template
