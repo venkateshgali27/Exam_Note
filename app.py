@@ -12,7 +12,14 @@ db_config = {
     'password': 'Venkatesh@91',
     'database': 'mydatabase'
 }
+from jinja2 import Environment, FileSystemLoader
 
+# Specify the template directory explicitly
+template_dir = '/path/to/template'
+env = Environment(loader=FileSystemLoader(template_dir))
+
+# Now you can render your template
+template = env.get_template('H login page.html')
 @app.route('/')
 def index():
     return render_template('Home page.html')
