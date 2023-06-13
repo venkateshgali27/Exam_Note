@@ -1,9 +1,10 @@
 
 from flask import Flask, render_template, request
 import mysql.connector
-
+import os 
 
 app = Flask(__name__)
+en_config=os.getenv("PROD_APP_SETTINGS","config.DevelopmentConfig")
 
 db_config = {
     'host': 'localhost',
